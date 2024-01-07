@@ -1,0 +1,3 @@
+[submodule "Source/urbackup-server-python-web-api-wrapper"]
+	path = Source/urbackup-server-python-web-api-wrapper
+	url = https://github.com/ademkocamaz/urbackup-server-python-web-api-wrapper

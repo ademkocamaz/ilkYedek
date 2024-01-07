@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block main %}
+  <div class="login-page">
+    <div class="login-box">
+      {% include 'partials/_alert.html' %}
+      <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+          <a href="" class="h1">ilkYedek</a>
+        </div>
+        <div class="card-body">
+          <p class="login-box-msg">Oturum açmak için bilgilerinizi giriniz.</p>
+          <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <div class="card">
+              <div class="card-body">
+                {% crispy login_form %}
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col text-right">
+                    <button type="submit" class="btn btn-dark">Oturum Aç</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
