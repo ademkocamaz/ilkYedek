@@ -133,7 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 BATON = {
     'SITE_HEADER': 'ilkYedek',
     'SITE_TITLE': 'ilkYedek Yönetim Paneli',
-    'INDEX_TITLE': 'ilkYedek, Yedekleme Sistemi''ne Hoşgeldiniz.',
+    'INDEX_TITLE': 'ilkYedek, Yöetim Paneli''ne Hoşgeldiniz.',
     # 'LOGIN_SPLASH': '/static/login-splash.jpg',
     'GRAVATAR_ENABLED': False,
     'SUPPORT_HREF': 'https://www.ilkadam.com.tr',
@@ -152,3 +152,5 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+X_FRAME_OPTIONS = "SAMEORIGIN"

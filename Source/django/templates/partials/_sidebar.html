@@ -1,0 +1,43 @@
+{% load static %}
+<!-- Sidebar -->
+<div class="sidebar" style="overflow-y: auto;">
+  <!-- Sidebar Menu -->
+  <nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <li class="nav-item">
+        <a href="/admin" class="nav-link active">
+          <i class="nav-icon fas fa-wrench"></i>
+          <p>Yönetim Paneli</p>
+        </a>
+      </li>
+      {% if 'bed' in request.path %}
+        <li class="nav-header">FORM</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-edit"></i>
+            <p>
+              Formlar
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="{% url 'pain' bed.id %}" class="nav-link">
+                <i class="far fa-file nav-icon"></i>
+                <p>Ağrı Formu Ekle</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'observation' bed.id %}" class="nav-link">
+                <i class="far fa-file nav-icon"></i>
+                <p>Gözlem Formu Ekle</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+  <!-- /.sidebar-menu -->
+</div>
+<!-- /.sidebar -->

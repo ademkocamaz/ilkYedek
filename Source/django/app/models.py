@@ -17,6 +17,9 @@ class Server(models.Model):
         max_length=500,
     )
 
+    def __str__(self) -> str:
+        return self.address
+
     class Meta:
         verbose_name = "Server"
         verbose_name_plural = "Serverlar"
